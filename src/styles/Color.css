@@ -1,0 +1,20 @@
+.color{
+  height:10px !important;
+  width:10px !important;
+  display:inline-block;
+}
+.color.blue {
+  background-color: blue;
+}
+.color.red {
+  background-color: red;
+}
+.color.yellow {
+  background-color: yellow;
+}
+.color.green {
+  background-color: green;
+}
+.color.lightgreen {
+  background-color: lightgreen;
+}

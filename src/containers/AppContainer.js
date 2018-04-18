@@ -5,7 +5,7 @@ import BlockContainer from "./BlockContainer";
 class AppContainer extends Component {
   render() {
     return (
-      <div className="app">
+      <div className="appContainer">
         <BlockContainer rows="8" cols="8" />
       </div>
     );

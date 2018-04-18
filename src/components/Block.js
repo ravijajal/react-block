@@ -5,17 +5,18 @@ import Cell from "./Cell";
 class Block extends Component {
   render() {
     if (
-      typeof this.props.blockRows === "undefined" ||
-      this.props.blockRows.length <= 0
+      typeof this.props.blocks === "undefined" ||
+      this.props.blocks.length <= 0
     ) {
       return <div className="blockContainer" />;
     }
+    let count =1;
     return (
       <div className="blockContainer">
-        {this.props.blockRows.map((rows, row) => (
+        {this.props.blocks.map((rows, row) => (
           <div className="block" key={row}>
             {rows.map((cells, col) => (
-              <Cell row={row} col={col} key={row + "" + col} visitCount={cells.visitCount} onChange={this.props.onChange} />
+              <Cell row={row} no={count++}col={col} key={row + "" + col} visitCount={cells.visitCount} onChange={this.props.onChange} />
             ))}
           </div>
         ))}

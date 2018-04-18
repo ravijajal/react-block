@@ -5,9 +5,9 @@ export const markCell = (row, col) => ({
   row,
   col
 });
-const setBlock = blockRows => ({
+const setBlock = blocks => ({
   type: POPULATE_BLOCK,
-  blockRows: blockRows
+  blocks: blocks
 });
 
 export const populateBlock = (rows, cols) => dispatch => {

@@ -8,19 +8,23 @@
   border: 3px solid;
   display: inline-block;
   cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
-.cell.blue{
+.cell.blue {
   background-color: blue;
 }
-.cell.red{
+.cell.red {
   background-color: red;
 }
-.cell.yellow{
+.cell.yellow {
   background-color: yellow;
 }
-.cell.green{
+.cell.green {
   background-color: green;
 }
-.cell.lightgreen{
+.cell.lightgreen {
   background-color: lightgreen;
 }

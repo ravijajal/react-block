@@ -1,7 +1,7 @@
 import { MARK_CELL, POPULATE_BLOCK } from "../types/block";
 
 const initialState = {
-  blockRows: []
+  blocks: []
 };
 
 const block = (state, action) => {
@@ -12,7 +12,7 @@ const block = (state, action) => {
     case MARK_CELL:
       return {
         ...state,
-        blockRows: state.blockRows.map((rows, row) =>
+        blocks: state.blocks.map((rows, row) =>
           rows.map(
             (cells, col) =>
               row === action.row && col === action.col
@@ -28,7 +28,7 @@ const block = (state, action) => {
     case POPULATE_BLOCK:
       return {
         ...state,
-        blockRows: action.blockRows
+        blocks: action.blocks
       };
     default:
       return state;

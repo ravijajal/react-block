@@ -1,20 +1,23 @@
 import React, { Component } from "react";
 import "../styles/Cell.css";
+import { COLORS } from "../types/color";
 
 class Cell extends Component {
   handleChange = () => {
-    this.props.onChange(this.props.row, this.props.col);
+    this.props.onChange(
+      this.props.row,
+      this.props.col,
+      this.props.no,
+      COLORS[this.props.visitCount + 1 > 4 ? 0 : this.props.visitCount + 1]
+    );
   };
   render() {
-    const colors = [
-      "cell lightgreen",
-      "cell red",
-      "cell yellow",
-      "cell blue",
-      "cell green",
-    ];
-    let className = colors[this.props.visitCount];
-    return <div className={className} onClick={this.handleChange} />;
+    let className = "cell " + COLORS[this.props.visitCount];
+    return (
+      <div className={className} onClick={this.handleChange}>
+        {this.props.no}
+      </div>
+    );
   }
 }
 

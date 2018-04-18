@@ -1,0 +1,8 @@
+.logContainer {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  margin: 20px;
+  height: 70%;
+  overflow: auto;
+}

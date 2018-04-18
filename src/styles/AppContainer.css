@@ -1,6 +1,6 @@
-.app {
+.appContainer {
   text-align: center;
-  border: 3px solid;
+  /* border: 3px solid; */
   margin: 40px auto;
   display: table;
 }
