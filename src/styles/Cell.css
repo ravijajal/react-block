@@ -7,5 +7,20 @@
   font-size: 16px;
   border: 3px solid;
   display: inline-block;
-  background-color: lightgray;
+  cursor: pointer;
+}
+.cell.blue{
+  background-color: blue;
+}
+.cell.red{
+  background-color: red;
+}
+.cell.yellow{
+  background-color: yellow;
+}
+.cell.green{
+  background-color: green;
+}
+.cell.lightgreen{
+  background-color: lightgreen;
 }
