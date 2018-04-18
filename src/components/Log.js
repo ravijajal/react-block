@@ -7,7 +7,7 @@ class Log extends Component {
   render() {
     const typeText =
       this.props.data.logType === LOG_CELL_CREATED ? "Created" : "Updated";
-    return <div className="log">{this.props.data.no +" "+ typeText} <Color color={this.props.data.color} /> </div>;
+    return <div className="log"><Color color={this.props.data.color} no={this.props.data.no} /> {typeText} </div>;
   }
 }
 
