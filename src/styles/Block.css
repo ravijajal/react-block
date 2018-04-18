@@ -1,0 +1,7 @@
+.blockContainer {
+  margin: 10px;
+}
+.blockContainer,
+.block {
+  display: table;
+}
