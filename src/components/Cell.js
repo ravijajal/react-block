@@ -3,18 +3,18 @@ import "../styles/Cell.css";
 import { COLORS } from "../types/color";
 
 class Cell extends Component {
-  handleChange = () => {
-    this.props.onChange(
+  handleClick = () => {
+    this.props.onCellClick(
       this.props.row,
       this.props.col,
       this.props.no,
-      COLORS[this.props.visitCount + 1 > 4 ? 0 : this.props.visitCount + 1]
+      this.props.visitCount
     );
   };
   render() {
     let className = "cell " + COLORS[this.props.visitCount];
     return (
-      <div className={className} onClick={this.handleChange}>
+      <div className={className} onClick={this.handleClick}>
         {this.props.no}
       </div>
     );

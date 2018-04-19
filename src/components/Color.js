@@ -3,10 +3,10 @@ import "../styles/Color.css";
 
 class Color extends Component {
   render() {
-    let className = "color " + this.props.color;
-    return <span className={className} >
-    {this.props.no}
-    </span>;
+    let className =
+      "color " +
+      (typeof this.props.color !== "undefined" ? this.props.color : "");
+    return <span className={className}>{this.props.no}</span>;
   }
 }
 

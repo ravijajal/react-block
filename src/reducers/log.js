@@ -18,7 +18,7 @@ const log = (state, action) => {
             row: action.row,
             col: action.col,
             no: action.no,
-            color: action.color,
+            visitCount: action.visitCount,
             logType: action.logType
           }
         ]

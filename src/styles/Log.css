@@ -1,3 +1,11 @@
 .log{
-  padding: 5px;
+  padding: 5px 20px;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  display: block;
+}
+.log span.inline{
+  display:inline-block;
 }

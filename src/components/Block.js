@@ -16,7 +16,7 @@ class Block extends Component {
         {this.props.blocks.map((rows, row) => (
           <div className="block" key={row}>
             {rows.map((cells, col) => (
-              <Cell row={row} no={count++}col={col} key={row + "" + col} visitCount={cells.visitCount} onChange={this.props.onChange} />
+              <Cell row={row} no={count++}col={col} key={row + "" + col} visitCount={cells.visitCount} onCellClick={this.props.onCellClick} />
             ))}
           </div>
         ))}

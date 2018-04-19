@@ -11,15 +11,15 @@ class BlockContainer extends Component {
   componentDidMount() {
     this.props.dispatch(populateBlock(this.props.rows, this.props.cols));
   }
-  handleChange = (row, col, no, color) => {
+  handleCellClick = (row, col, no, visitCount) => {
     this.props.dispatch(markCell(row, col));
-    this.props.dispatch(logCell(row, col, no, color, LOG_CELL_UPDATED));
+    this.props.dispatch(logCell(row, col, no, visitCount, LOG_CELL_UPDATED));
   };
   render() {
     const { blocks } = this.props;
     return (
       <div>
-        <Block blocks={blocks} onChange={this.handleChange} />
+        <Block blocks={blocks} onCellClick={this.handleCellClick} />
         <LogContainer rows={this.props.rows} cols={this.props.cols} />
       </div>
     );
